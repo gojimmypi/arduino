@@ -4,11 +4,11 @@
  #
  echo "Waiting for avr, gcc, or make commands... (Ctrl-C to abort)"
  FOUND=""
- STOPAT=$(( $(date +%s) + 10 )) #run for only 5 seconds
  while [  "$FOUND" == "" ]; do
    FOUND=$(ps aux | grep -E "avr|gcc|make" | grep -v grep)
  done
  echo "Scanning..."
+ STOPAT=$(( $(date +%s) + 5 )) #run for only 5 seconds
  while :
   do
     FOUND+="\n"$(ps aux | grep -E 'avr|gcc|make'  | grep -v grep)
