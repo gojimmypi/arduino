@@ -62,9 +62,9 @@ Edit:
 
 /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/boards.txt
 
-`
-##############################################################gert328.name=Gertboard with ATmega328 (GPIO)gert328.upload.using=gpiogert328.upload.protocol=gpiogert328.upload.maximum_size=32768gert328.upload.speed=57600gert328.upload.disable_flushing=truegert328.bootloader.low_fuses=0xE7gert328.bootloader.high_fuses=0xDAgert328.bootloader.extended_fuses=0x07gert328.bootloader.path=atmegagert328.bootloader.file=ATmegaBOOT_168_gert328.hexgert328.bootloader.unlock_bits=0x3Fgert328.bootloader.lock_bits=0x0Fgert328.build.mcu=atmega328pgert328.build.f_cpu=12000000Lgert328.build.core=arduinogert328.build.variant=standard#gert328.upload.tool=avrdude##############################################################gert168.name=Gertboard with ATmega168 (GPIO)gert168.upload.using=gpiogert168.upload.protocol=gpiogert168.upload.maximum_size=16384gert168.upload.speed=57600gert168.upload.disable_flushing=truegert168.bootloader.low_fuses=0xE7gert168.bootloader.high_fuses=0xDAgert168.bootloader.extended_fuses=0x07gert168.bootloader.path=atmegagert168.bootloader.file=ATmegaBOOT_168_gert168.hexgert168.bootloader.unlock_bits=0x3Fgert168.bootloader.lock_bits=0x0Fgert168.build.mcu=atmega168gert168.build.f_cpu=12000000Lgert168.build.core=arduinogert168.build.variant=standard#gert168.upload.tool=avrdude##############################################################
-`
+---
+###########################################################
+---
 
 Add these lines to
 
