@@ -14,3 +14,21 @@ and take note of the "Linix Arm (experimental)" version, which as of 2016, is th
 
 https://www.arduino.cc/download_handler.php?f=/arduino-1.6.12-linuxarm.tar.xz
 
+These instructions will assume it is downloaded to the RPi directory:
+
+/home/pi/Downloads/
+
+First uncompress it from about 75MB to a 344MB tar file:
+
+cd ~/Downloads/
+xz -d arduino-1.6.12-linuxarm.tar.xz  # uncompress, removing original xz file when done
+tar -xvf arduino-1.6.12-linuxarm.tar  # extract the Arduino IDE to the current directory
+
+Upon completion, the Version 1.6.12 Arduino IDE will be in:
+
+/home/pi/Downloads/arduino-1.6.12
+
+(You can choose to put it pretty much anywhere)
+
+
+
