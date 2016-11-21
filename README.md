@@ -58,13 +58,14 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 If perhaps you want to bit-bang program an Arduino such as the http://rasp.io/duino/ a few more changes are needed.
 
-Edit:
+Edit this file:
 
 /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/boards.txt
 
----
+adding this text:
 
----
+
+
 
 Add these lines to
 
