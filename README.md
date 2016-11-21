@@ -63,7 +63,7 @@ Edit:
 /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/boards.txt
 
 ---
-###########################################################
+
 ---
 
 Add these lines to
