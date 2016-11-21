@@ -30,5 +30,30 @@ Upon completion, the Version 1.6.12 Arduino IDE will be in:
 
 (You can choose to put it pretty much anywhere)
 
+Install using the bash script:
+
+cd arduino-1.6.12
+sudo ./install.sh 
+
+You may get an error included in the output like this:
+
+Adding desktop shortcut, menu item and file associations for Arduino IDE...touch: cannot touch /root/.local/share/applications/mimeapps.list: No such file or directory
+/usr/bin/xdg-mime: 781: /usr/bin/xdg-mime: cannot create /root/.local/share/applications/mimeapps.list.new: Directory nonexistent 
+done!
+
+(remember, it is "experimental" afterall, eh?)
+
+to launch:
+
+./arduino
+
+Or if you are in a different directory:
+
+~/Downloads/arduino-1.6.12/arduino
+
+with this new version of Arduino on your Raspberry Pi, you'll probably want to include the magic url for Additional Boards Manager in File - Settings, perhaps for the ESP8266 with this URL:
+
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
 
 
