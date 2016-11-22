@@ -46,11 +46,15 @@ You may get an error included in the output like this:
 
 to launch:
 
-```./arduino```
+```
+./arduino
+```
 
 Or if you are in a different directory:
 
-```~/Downloads/arduino-1.6.12/arduino```
+```
+~/Downloads/arduino-1.6.12/arduino
+```
 
 with this new version of Arduino on your Raspberry Pi, you'll probably want to include the magic url for Additional Boards Manager in File - Settings, perhaps for the ESP8266 with this URL:
 
@@ -241,7 +245,9 @@ In particular this comment from nsayer:
 
 Thus far, the only solution I have found to the permission issue is to run the IDE with full permissions (certainly not ideal)
 
-```sudo ~/Downloads/arduino-1.6.12/arduino```
+```
+sudo ~/Downloads/arduino-1.6.12/arduino
+```
 
 Note that when running with sudo, the IDE will not have the previous defaults remembered for board, port, and programmer.
 
@@ -256,9 +262,11 @@ This is a very promising error, and since the board is a simple ATmeaga328, we c
 cp /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/bootloaders/atmega/ATmegaBOOT_168_atmega328.hex  /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/bootloaders/ATmegaBOOT_168_gert328.hex
 ```
 
-Note that if you are STILL getting the error about not being able to export GPIO, consider manually unexporting it:
+Note that if you are STILL getting the error about not being able to export GPIO, consider manually unexporting it, for example #8:
 
-``` echo 8 > /sys/class/gpio/unexport ```
+``` 
+echo 8 > /sys/class/gpio/unexport 
+```
 
 If all is working ok, you should see something like this (blink.ino shown):
 
