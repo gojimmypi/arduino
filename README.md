@@ -1,6 +1,8 @@
-# arduino
+# Arduino IDE - Experimental ARM Version Installation & Issues.
 
-To install Arduino IDE on the Raspberry Pi the command:
+There are a variety of versions and methods available to install the Arduino IDE on a Raspberry Pi.
+
+The most common way to install Arduino IDE on the Raspberry Pi the command:
 
 ```sudo apt-get install arduino```
 
@@ -33,9 +35,10 @@ Upon completion, the Version 1.6.12 Arduino IDE will be in:
 
 Install using the bash script:
 
-``cd arduino-1.6.12
+``'
+cd arduino-1.6.12
 sudo ./install.sh 
-``
+``'
 You may get an error included in the output like this:
 
 >Adding desktop shortcut, menu item and file associations for Arduino IDE...touch: cannot touch /root/.local/share/applications/mimeapps.list: No such file or directory
@@ -67,7 +70,7 @@ Edit this file:
 
 /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/boards.txt
 
-adding this text:
+adding this text for these gert328 and gert168 boards:
 
 ```
 ##############################################################
@@ -126,8 +129,7 @@ gert168.upload.tool=avrdude
 
 ```
 
-
-Add these lines to
+Add these gpio lines to
 
 /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/programmers.txt
 
@@ -144,7 +146,7 @@ Then edit
 
 (yes, the Arduino IDE wants to use its OWN version of avrdude, regardless of what you may have installed!)
 
-..and add this lines right after the PROGRAMMER DEFINITIONS header
+..and add this lines right after the PROGRAMMER DEFINITIONS header:
 
 ```
 programmer
@@ -184,7 +186,6 @@ given all of that, you'll need to use a symbolic link to force the Arduino IDE t
 
 see what version you have by using avrdude -v 
 
-on my most recent update of Raspian Jesse:
 ```
 avrdude: Version 6.1, compiled on Jul  7 2015 at 13:18:47
          Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
