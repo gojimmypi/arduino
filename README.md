@@ -230,17 +230,17 @@ avrdude done.  Thank you.
 There's a useful discussion of this topic here: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=100913&p=700025
 
 In particular this comment from nsayer:
-* It turns out this isn't a bug in sysfs, but it is a consequence of having udev set the file permissions. There's inevitably going to be a race between the creation of the node with the "wrong" permissions and the rectification of those permissions by udev.
+_It turns out this isn't a bug in sysfs, but it is a consequence of having udev set the file permissions. There's inevitably going to be a race between the creation of the node with the "wrong" permissions and the rectification of those permissions by udev.
 
 The fundamental reason the race exists is that users of gpio are expected to perform initialization actions that alter the content of the device tree (by creating the /sys/class/gpio/gpioX symlinks and associated directories and device control nodes). The alteration of the device tree wakes up udev, which comes in and does its work, completing it at an indeterminate future time. There is no way to block the write to "export" until udev finishes.
 
 The alternative would be for the device tree to be static rather than dynamic. udev would then be able to set the permissions correctly at boot time and be done with it. But that would be a huge change from how it's done now.
 
-The only other solution is to either not care about udev's permission changing, which means respecting the default kernel permissions of root:root and 644, or sleeping (not only to give udev time to do its work, but to yield the cpu to give it a chance on single core systems), or polling the node, checking the permissions until they change.*
+The only other solution is to either not care about udev's permission changing, which means respecting the default kernel permissions of root:root and 644, or sleeping (not only to give udev time to do its work, but to yield the cpu to give it a chance on single core systems), or polling the node, checking the permissions until they change._
 
 Thus far, the only solution I have found to the permission issue is to run the IDE with full permissions (certainly not ideal)
 
-sudo ~/Downloads/arduino-1.6.12/arduino
+```sudo ~/Downloads/arduino-1.6.12/arduino```
 
 Note that when running with sudo, the IDE will not have the previous defaults remembered for board, port, and programmer.
 
@@ -251,5 +251,7 @@ Bootloader file specified but missing: /home/pi/Downloads/arduino-1.6.12/hardwar
 ```
 This is a very promising error, and since the board is a simple ATmeaga328, we can simply copy the bootloader file:
 
- 
+```
+cp /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/bootloaders/atmega/ATmegaBOOT_168_atmega328.hex  /home/pi/Downloads/arduino-1.6.12/hardware/arduino/avr/bootloaders/ATmegaBOOT_168_gert328.hex
+```
 
