@@ -6,7 +6,7 @@ To install Arduino IDE on the Raspberry Pi the command:
 
 can be used, however the version of the IDE installed as of 2016, is a very VERY old version.
 
-To install a more recent one, say... perhaps you are interested in using the IDE to progrem the ESP8266, visit:
+To install a more recent one, say... perhaps you are interested in using the IDE to program the ESP8266, visit:
 
 https://www.arduino.cc/en/Main/Software
 
