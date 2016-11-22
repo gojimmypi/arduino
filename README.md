@@ -199,7 +199,7 @@ avrdude: no programmer has been specified on the command line or the config file
          Specify a programmer using the -c option and try again
 
 ```
-however the newer version that came with the Arduino 1.6.12 IDE:
+however the newer version of avrdude (6.3) that came with the Arduino 1.6.12 IDE seems to have problems:
 
 /home/pi/Downloads/arduino-1.6.12/hardware/tools/avr/bin/avrdude -v
 ```
@@ -209,7 +209,7 @@ avrdude: Version 6.3, compiled on Sep 12 2016 at 15:28:39
 
 ```
 
-So I renamed that avrdude to avrdude.bak and created a link to the other one:
+So I renamed that avrdude to avrdude.bak and created a link to the older one that is installed with apt-get (6.1):
 
 ```
 ln -s /usr/bin/avrdude /home/pi/Downloads/arduino-1.6.12/hardware/tools/avr/bin/avrdude
