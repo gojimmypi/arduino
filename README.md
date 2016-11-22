@@ -2,7 +2,7 @@
 
 To install Arduino IDE on the Raspberry Pi the command:
 
-sudo apt-get install arduino
+```sudo apt-get install arduino```
 
 can be used, however the version of the IDE installed as of 2016, is a very VERY old version.
 
@@ -10,7 +10,7 @@ To install a more recent one, say... perhaps you are interested in using the IDE
 
 https://www.arduino.cc/en/Main/Software
 
-and take note of the "Linix Arm (experimental)" version, which as of 2016, is the 1.6.12 version:
+and take note of the "Linux Arm (experimental)" version, which as of 2016, is the 1.6.12 version:
 
 https://www.arduino.cc/download_handler.php?f=/arduino-1.6.12-linuxarm.tar.xz
 
@@ -20,10 +20,11 @@ These instructions will assume it is downloaded to the RPi directory:
 
 First uncompress it from about 75MB to a 344MB tar file:
 
+```
 cd ~/Downloads/
 xz -d arduino-1.6.12-linuxarm.tar.xz  # uncompress, removing original xz file when done
 tar -xvf arduino-1.6.12-linuxarm.tar  # extract the Arduino IDE to the current directory
-
+```
 Upon completion, the Version 1.6.12 Arduino IDE will be in:
 
 /home/pi/Downloads/arduino-1.6.12
@@ -32,24 +33,24 @@ Upon completion, the Version 1.6.12 Arduino IDE will be in:
 
 Install using the bash script:
 
-cd arduino-1.6.12
+``cd arduino-1.6.12
 sudo ./install.sh 
-
+``
 You may get an error included in the output like this:
 
-Adding desktop shortcut, menu item and file associations for Arduino IDE...touch: cannot touch /root/.local/share/applications/mimeapps.list: No such file or directory
-/usr/bin/xdg-mime: 781: /usr/bin/xdg-mime: cannot create /root/.local/share/applications/mimeapps.list.new: Directory nonexistent 
-done!
+>Adding desktop shortcut, menu item and file associations for Arduino IDE...touch: cannot touch /root/.local/share/applications/mimeapps.list: No such file or directory
+>/usr/bin/xdg-mime: 781: /usr/bin/xdg-mime: cannot create /root/.local/share/applications/mimeapps.list.new: Directory nonexistent 
+>done!
 
 (remember, it is "experimental" afterall, eh?)
 
 to launch:
 
-./arduino
+```./arduino```
 
 Or if you are in a different directory:
 
-~/Downloads/arduino-1.6.12/arduino
+```~/Downloads/arduino-1.6.12/arduino```
 
 with this new version of Arduino on your Raspberry Pi, you'll probably want to include the magic url for Additional Boards Manager in File - Settings, perhaps for the ESP8266 with this URL:
 
@@ -198,7 +199,7 @@ however the newer version that came with the Arduino 1.6.12 IDE:
 
 /home/pi/Downloads/arduino-1.6.12/hardware/tools/avr/bin/avrdude -v
 ```
-vrdude: Version 6.3, compiled on Sep 12 2016 at 15:28:39
+avrdude: Version 6.3, compiled on Sep 12 2016 at 15:28:39
          Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
          Copyright (c) 2007-2014 Joerg Wunsch
 
