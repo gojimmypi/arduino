@@ -63,6 +63,21 @@ with this new version of Arduino on your Raspberry Pi, you'll probably want to i
 
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
+#bash prompt compile for ESP8266
+
+Say you have a sketch called [esp_blink.ino](https://github.com/gojimmypi/arduino/blob/master/esp_blink.ino) that you want to compile from command line.
+
+There's a great Makefile starting point at (https://github.com/plerup/makeEspArduino), mine is called [makeEspArduino_esp_blink.mk](https://github.com/gojimmypi/arduino/blob/master/makeEspArduino_esp_blink.mk)
+
+Simply use it like this:
+
+```
+make -f  makeEspArduino_esp_blink.mk upload
+```
+
+or put it in a shell script, like [doMake_esp_blink.sh](https://github.com/gojimmypi/arduino/blob/master/doMake_esp_blink.sh)
+
+#RasPiO Duino
 
 If perhaps you want to bit-bang program an Arduino such as the http://rasp.io/duino/ a few more changes are needed.
 
