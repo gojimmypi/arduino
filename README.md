@@ -35,10 +35,10 @@ Upon completion, the Version 1.6.12 Arduino IDE will be in:
 
 Install using the bash script:
 
-``'
+```
 cd arduino-1.6.12
 sudo ./install.sh 
-``'
+```
 You may get an error included in the output like this:
 
 >Adding desktop shortcut, menu item and file associations for Arduino IDE...touch: cannot touch /root/.local/share/applications/mimeapps.list: No such file or directory
